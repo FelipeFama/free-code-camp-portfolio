@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --green-screen: #009637;
+  --ash-grey: #b6b8aa;
+  --white-detail: #fbfcfc;
+  --pale-yellow: #ffffed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--white-detail);
+  line-height: 1.4;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--pale-yellow);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--green-screen);
+  color: var(--pale-yellow);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.navbar .logo {
+  margin-left: 1rem;
+}
+
+#navbar .nav-list {
+  display: flex;
+  margin-inline: 2rem;
+}
+
+#navbar .nav-list a {
+  display: block;
+  padding: 1rem;
+  transition: 1s ease-in-out;
+}
+
+#navbar .nav-list a:hover {
+  background: var(--ash-grey);
+}
+
+#welcome-section {
+  color: var(--ash-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 85%;
+  margin-block: 3rem;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+}
+
+#welcome-section > p {
+  color: var(--green-screen);
+  font-size: 2rem;
+}
+
+section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.project-grid {
+  display: flex;
+  margin: 1.25rem auto 0;
+  max-width: 65rem;
+}
+
+.project-tile {
+  margin: 0.6rem;
+  transition: transform 0.3s ease;
+}
+
+.project-tile:hover {
+  transform: scale(1.05);
+}
+
+.project-tile img {
+  max-width: 100%;
+}
+
+.project-tile p {
+  color: #000;
+  margin-top: 2rem;
+}
+
+.profile-link {
+  background-color: var(--ash-grey);
+  color: var(--pale-yellow);
+}
+
+.profile-link > p {
+  padding: 1rem;
+}
+
+.profile-link ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+footer {
+  background-color: var(--green-screen);
+  color: var(--pale-yellow);
+  text-align: center;
+  padding: 1rem;
+}
+
+footer .fa-heart {
+  color: red;
+}
+
+@media (max-width: 49rem) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
